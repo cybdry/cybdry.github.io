@@ -20,14 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetSection = document.querySelector(targetId);
 
       if (targetSection) {
-        const headerHeight = 80; // Adjust based on your header height
-        const elementPosition = targetSection.getBoundingClientRect().top;
-        const offsetPosition =
-          elementPosition + window.pageYOffset - headerHeight;
-
-        window.scrollTo({
-          top: offsetPosition,
+        // Use native smooth scroll - CSS scroll-padding-top handles the offset
+        targetSection.scrollIntoView({
           behavior: "smooth",
+          block: "start",
         });
       }
     });

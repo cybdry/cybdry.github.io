@@ -7,6 +7,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 160px; /* Increased offset for sticky header + extra space */
 }
 
 :root {
@@ -36,7 +37,7 @@ body {
 /* Header Styles */
 header {
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 20px;
+    padding: 20px 0;
     margin-bottom: 40px;
     position: sticky;
     top: 0;
@@ -47,7 +48,7 @@ header {
 
 header.scrolled {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    padding-bottom: 15px;
+    padding: 15px 0;
 }
 
 .header-content {
@@ -202,6 +203,7 @@ nav a.active::after {
 /* Section Styles */
 section {
     margin-bottom: 60px;
+    padding-top: 40px; /* Increased padding for better spacing with sticky header */
 }
 
 h2 {
